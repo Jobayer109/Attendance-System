@@ -2,7 +2,14 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello from server");
+  const obj = {
+    name: "Jobayer Ahmed",
+    email: "jobayer@gmail.com",
+    city: "Gaibandha",
+    Division: "Rangpur",
+    Country: "Bangladesh",
+  };
+  res.json(obj);
 });
 
 app.listen(8080, () => {
